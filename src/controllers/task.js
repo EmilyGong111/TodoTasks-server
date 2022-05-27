@@ -10,6 +10,7 @@ const addTask = (req, res)=>{
     console.log(tasks);
 }
 
+
 const getAllTasks = (req,res)=>{
     const {description} = req.query;
     const filteredTask = tasks.filter((task) => task.description.includes(description));

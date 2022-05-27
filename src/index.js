@@ -15,7 +15,7 @@ app.use(helmet());//Protect server from attack
 app.use(cors({origin:"*"}));
 app.use(morgan('common'));//HTTP request logger middleware for node.js. Will log the request ip, time, and method in terminal. Can only print, but can not store.
 app.use(express.json());
-app.use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJsDoc));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJsDoc));
 
 //GET/v1/tasks
 // app.use('/v1')
